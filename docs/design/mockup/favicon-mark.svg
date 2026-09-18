@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- The section marker from the design system, scaled up.
+       Pure geometry: renders identically everywhere, converts
+       cleanly to .ico/.png, no font dependency.
+       Only the tile flips for dark browser chrome; the moss stays
+       put, because it reads against both the ink and the paper. -->
+  <style>
+    .tile { fill: #1c1917; }
+    @media (prefers-color-scheme: dark) { .tile { fill: #fafaf9; } }
+  </style>
+  <rect class="tile" width="64" height="64" rx="14"/>
+  <rect fill="#6d8a3e" x="17" y="17" width="30" height="30" rx="7"/>
+</svg>

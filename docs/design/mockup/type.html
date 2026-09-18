@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" data-type="editorial">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="cache-control" content="no-store" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<title>Typeface specimen — Patrik Pukan</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Familjen+Grotesk:wght@400;500;600;700&family=Fragment+Mono&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Martian+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&family=Schibsted+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ---------------------------------------------------------
+   MOCKUP-ONLY specimen page. Not part of the design.
+--------------------------------------------------------- */
+
+/* --- the pairings ------------------------------------- */
+
+:root[data-type="editorial"] {
+  --f-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --f-body: "Archivo", system-ui, sans-serif;
+  --f-mono: "Martian Mono", ui-monospace, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.015em;
+  --mono-size: 0.6875rem;
+}
+:root[data-type="quiet"] {
+  --f-display: "Schibsted Grotesk", system-ui, sans-serif;
+  --f-body: "Schibsted Grotesk", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --display-weight: 600;
+  --display-tracking: -0.03em;
+  --mono-size: 0.75rem;
+}
+:root[data-type="warm"] {
+  --f-display: "Fraunces", Georgia, serif;
+  --f-body: "Archivo", system-ui, sans-serif;
+  --f-mono: "Spline Sans Mono", ui-monospace, monospace;
+  --display-weight: 600;
+  --display-tracking: -0.02em;
+  --mono-size: 0.75rem;
+}
+:root[data-type="odd"] {
+  --f-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --f-body: "Familjen Grotesk", system-ui, sans-serif;
+  --f-mono: "Fragment Mono", ui-monospace, monospace;
+  --display-weight: 600;
+  --display-tracking: -0.03em;
+  --mono-size: 0.75rem;
+}
+:root[data-type="serifbody"] {
+  --f-display: "Instrument Serif", Georgia, serif;
+  --f-body: "Newsreader", Georgia, serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.015em;
+  --mono-size: 0.75rem;
+}
+:root[data-type="neutral"] {
+  --f-display: "Public Sans", system-ui, sans-serif;
+  --f-body: "Public Sans", system-ui, sans-serif;
+  --f-mono: "Fragment Mono", ui-monospace, monospace;
+  --display-weight: 600;
+  --display-tracking: -0.03em;
+  --mono-size: 0.75rem;
+}
+:root[data-type="everyone"] {
+  --f-display: "Inter", system-ui, sans-serif;
+  --f-body: "Inter", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --display-weight: 600;
+  --display-tracking: -0.03em;
+  --mono-size: 0.75rem;
+}
+:root[data-type="current"] {
+  --f-display: var(--font-sans);
+  --f-body: var(--font-sans);
+  --f-mono: var(--font-mono);
+  --display-weight: 600;
+  --display-tracking: -0.03em;
+  --mono-size: 0.75rem;
+}
+
+/* --- apply --------------------------------------------- */
+
+body { font-family: var(--f-body); }
+/* Only the h1 wears the display face — entry titles are body sans,
+   as they would be on the real site. */
+.spec h1 { font-family: var(--f-display); }
+.spec h3 { font-family: var(--f-body); }
+.spec .mono, .spec code { font-family: var(--f-mono); font-size: var(--mono-size); }
+
+.spec { padding-block: 3rem; }
+.spec + .spec { border-top: 1px solid var(--border); }
+.spec__label {
+  font-family: var(--font-mono); font-size: 0.6875rem;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--muted-foreground); margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.spec__label::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+.name {
+  font-size: clamp(2.25rem, 7vw, 3.5rem); line-height: 1.05;
+  font-weight: var(--display-weight); letter-spacing: var(--display-tracking);
+  margin-bottom: 0.5rem;
+}
+.role { font-size: 1.125rem; color: var(--muted-foreground); margin-bottom: 1.5rem; }
+.bio { max-width: 34rem; color: var(--muted-foreground); margin-bottom: 1rem; }
+.bio strong {
+  color: var(--foreground); font-weight: 500;
+  box-shadow: inset 0 -0.4em 0 color-mix(in oklab, var(--brand) 14%, transparent);
+}
+.sizes p { max-width: 34rem; color: var(--muted-foreground); margin-bottom: 0.75rem; }
+.sizes .s13 { font-size: 0.8125rem; }
+.sizes .s15 { font-size: 0.9375rem; }
+.sizes .s17 { font-size: 1.0625rem; }
+
+.diacritics { font-size: 2rem; line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 0.75rem; font-family: var(--f-display); }
+.diacritics--body { font-size: 0.9375rem; font-family: var(--f-body); color: var(--muted-foreground); letter-spacing: 0; }
+.warn { color: var(--muted-foreground); font-size: 0.8125rem; max-width: 34rem; margin-top: 0.75rem; }
+
+.figs { display: flex; gap: 2rem; flex-wrap: wrap; align-items: baseline; margin-bottom: 1rem; }
+.figs div { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; }
+.figs span { display: block; font-family: var(--font-mono); font-size: 0.6875rem; color: var(--muted-foreground); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 400; margin-bottom: 0.125rem; }
+
+.recipe {
+  font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.9;
+  background: var(--muted); border-radius: var(--radius);
+  padding: 1rem 1.125rem; color: var(--muted-foreground);
+  overflow-x: auto; white-space: pre;
+}
+.recipe b { color: var(--foreground); font-weight: 500; }
+.note { color: var(--muted-foreground); font-size: 0.8125rem; max-width: 34rem; margin-top: 1rem; }
+.note a { color: var(--brand); }
+
+/* picker */
+.picker {
+  position: fixed; left: 50%; transform: translateX(-50%); bottom: 1rem; z-index: 60;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem;
+  background: color-mix(in oklab, var(--card) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border); border-radius: 9999px;
+  padding: 0.375rem; box-shadow: 0 8px 30px rgb(0 0 0 / 0.10);
+  max-width: calc(100vw - 2rem);
+}
+.picker button {
+  font-family: var(--font-mono); font-size: 0.75rem; cursor: pointer;
+  border: 1px solid transparent; background: transparent; color: var(--muted-foreground);
+  border-radius: 9999px; padding: 0.25rem 0.75rem; white-space: nowrap;
+}
+.picker button:hover { background: var(--accent); color: var(--foreground); }
+.picker button[aria-pressed="true"] { background: var(--primary); color: var(--primary-foreground); }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="shell site-header__inner">
+    <a href="index.html" class="brand" style="font-family: var(--f-display); font-weight: var(--display-weight);">patrik pukan<span style="font-family: var(--f-body)"> — typeface specimen</span></a>
+    <nav class="nav">
+      <a href="index.html">← Back to site</a>
+      <button class="btn btn--icon" id="theme" aria-label="Toggle theme">
+        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>
+        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" hidden><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main style="padding-bottom: 5rem">
+
+  <!-- the actual hero, as it would appear -->
+  <section class="spec" style="padding-top: 4.5rem">
+    <div class="shell">
+      <h1 class="name">Patrik Pukan</h1>
+      <p class="role">Fullstack engineer</p>
+      <p class="bio">
+        I build products end to end — <strong>type-safe web apps</strong> with React and
+        TypeScript, the APIs behind them, and the <strong>native mobile clients</strong>
+        that ship alongside. I care about small bundles, fast feedback loops, and
+        interfaces that stay out of the way.
+      </p>
+      <div class="intro__meta" style="margin-top: 1.5rem">
+        <span class="badge"><span class="dot"></span> Open to work</span>
+        <span class="badge mono">Bratislava, SK · CET</span>
+        <span class="badge">EN · SK</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- body copy at the sizes actually used -->
+  <section class="spec">
+    <div class="shell sizes">
+      <p class="spec__label">Body copy — the real test</p>
+      <p class="s17">17px · case-study summary. A personal-finance app where the web and mobile clients are equal citizens — both fully usable offline, both writing to the same ledger.</p>
+      <p class="s15">15px · body. Six years writing software, most of it in small teams where the line between frontend, backend, and mobile is fuzzy by design. I like owning a feature from schema to pixel. This is the size most of your site is set in, so if it feels like work to read here, the typeface is wrong regardless of how the headline looks.</p>
+      <p class="s13">13px · captions and notes. The ledger view, mid-sync. Pending rows carry a subtle state until the server acknowledges them.</p>
+    </div>
+  </section>
+
+  <!-- mono, doing its real job -->
+  <section class="spec">
+    <div class="shell">
+      <p class="spec__label">Mono — labels, periods, code</p>
+      <p class="mono" style="letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-foreground); margin-bottom: 1rem;">Projects · About · Experience</p>
+      <div class="timeline" style="margin-bottom: 1.25rem">
+        <div class="entry">
+          <span class="entry__when mono">2023 — now</span>
+          <div class="entry__what">
+            <h3>Senior Software Engineer</h3>
+            <p class="entry__where">Acme Digital · Bratislava</p>
+          </div>
+        </div>
+        <div class="entry">
+          <span class="entry__when mono">2021 — 2023</span>
+          <div class="entry__what">
+            <h3>Fullstack Engineer</h3>
+            <p class="entry__where">Studio Kilo · Remote</p>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--muted-foreground); max-width: 34rem">
+        Inline code at 13px: <code style="background: var(--muted); border-radius: 4px; padding: 0.1em 0.35em;">categorize(tx_id, "Groceries")</code>
+      </p>
+    </div>
+  </section>
+
+  <!-- numbers -->
+  <section class="spec">
+    <div class="shell">
+      <p class="spec__label">Figures</p>
+      <div class="figs">
+        <div><span>Sync payload</span>4.1 kB</div>
+        <div><span>Time to interactive</span>0.4 s</div>
+        <div><span>Conflicts lost</span>0</div>
+        <div><span>Stars</span>1,284</div>
+        <div><span>Year</span>2026</div>
+      </div>
+      <p class="note">Watch the <b>1</b> and the <b>4</b> — some faces give them near-identical widths at display size, and some draw a <b>0</b> too close to an <b>O</b>.</p>
+    </div>
+  </section>
+
+  <!-- the Slovak filter -->
+  <section class="spec">
+    <div class="shell">
+      <p class="spec__label">Slovak diacritics — the elimination test</p>
+      <p class="diacritics">ľ ď ť ô ŕ ĺ ä ž š č</p>
+      <p class="diacritics">Ľubomír ťažký kôň</p>
+      <p class="diacritics--body">Príliš žltúčky kôň úpel ďábelské ódy. Ľúbiť, štvrť, ďalej, výťah, mäkký, vŕba, hĺbka.</p>
+      <p class="warn">
+        Look specifically at <b>ľ ď ť</b>. The caron becomes a raised apostrophe on
+        ascenders in Slovak — if it renders as a floating check mark over the letter,
+        or collides with the ascender, the face was never drawn for this language.
+        Also check that <b>ŕ</b> and <b>ĺ</b> exist at all; they are Slovak-only and
+        frequently missing.
+      </p>
+    </div>
+  </section>
+
+  <!-- what to install -->
+  <section class="spec">
+    <div class="shell">
+      <p class="spec__label">Recipe</p>
+      <div class="recipe" id="recipe"></div>
+      <p class="note" id="recipe-note"></p>
+    </div>
+  </section>
+
+</main>
+
+<div class="picker" role="group" aria-label="Typeface pairing">
+  <button data-val="editorial" aria-pressed="true">editorial</button>
+  <button data-val="quiet" aria-pressed="false">quiet</button>
+  <button data-val="warm" aria-pressed="false">warm</button>
+  <button data-val="odd" aria-pressed="false">odd</button>
+  <button data-val="serifbody" aria-pressed="false">serif body</button>
+  <button data-val="neutral" aria-pressed="false">neutral</button>
+  <button data-val="everyone" aria-pressed="false">inter</button>
+  <button data-val="current" aria-pressed="false">system</button>
+</div>
+
+<script>
+  const root = document.documentElement;
+  const sun = document.getElementById('icon-sun');
+  const moon = document.getElementById('icon-moon');
+  const setTheme = (dark) => { root.classList.toggle('dark', dark); sun.hidden = dark; moon.hidden = !dark; };
+  setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.getElementById('theme').addEventListener('click', () => setTheme(!root.classList.contains('dark')));
+
+  const header = document.getElementById('header');
+  const onScroll = () => header.dataset.scrolled = window.scrollY > 8;
+  onScroll();
+  addEventListener('scroll', onScroll, { passive: true });
+
+  const recipes = {
+    editorial: {
+      css: `--font-display: "Instrument Serif", Georgia, serif;\n--font-sans:    "Archivo", system-ui, sans-serif;\n--font-mono:    "Commit Mono", ui-monospace, monospace;`,
+      install: `npm i @fontsource/instrument-serif @fontsource-variable/archivo`,
+      note: 'The recommended pairing. Serif headline over a grotesk body — rare in dev portfolios, and it suits the warm stone palette. Archivo (Omnibus-Type) has serious extended-Latin coverage, which matters for Slovak. <b>Commit Mono is not on Google Fonts</b> — download it from commitmono.com and self-host; this preview substitutes Martian Mono, which is wider.'
+    },
+    quiet: {
+      css: `--font-display: "Schibsted Grotesk", system-ui, sans-serif;\n--font-sans:    "Schibsted Grotesk", system-ui, sans-serif;\n--font-mono:    "IBM Plex Mono", ui-monospace, monospace;`,
+      install: `npm i @fontsource-variable/schibsted-grotesk @fontsource/ibm-plex-mono`,
+      note: 'One family doing everything. Quietly warm, still uncommon, and it disappears behind the content — which is a feature if you want the layout to carry the design.'
+    },
+    warm: {
+      css: `--font-display: "Fraunces", Georgia, serif;\n--font-sans:    "Archivo", system-ui, sans-serif;\n--font-mono:    "Spline Sans Mono", ui-monospace, monospace;`,
+      install: `npm i @fontsource-variable/fraunces @fontsource-variable/archivo`,
+      note: 'Fraunces is a variable serif with SOFT and WONK axes — genuinely unusual and very warm. Display only; it is too much at 15px. Set the optical size axis to match the rendered size or it looks wrong at headline scale.'
+    },
+    odd: {
+      css: `--font-display: "Bricolage Grotesque", system-ui, sans-serif;\n--font-sans:    "Familjen Grotesk", system-ui, sans-serif;\n--font-mono:    "Fragment Mono", ui-monospace, monospace;`,
+      install: `npm i @fontsource-variable/bricolage-grotesque @fontsource-variable/familjen-grotesk`,
+      note: 'The most personality of the set. Bricolage has optical-size and width axes and reads as editorial rather than techy. Check it carefully at 15px — quirk that is charming in a headline gets tiring in a CV.'
+    },
+    serifbody: {
+      css: `--font-display: "Instrument Serif", Georgia, serif;\n--font-sans:    "Newsreader", Georgia, serif;\n--font-mono:    "IBM Plex Mono", ui-monospace, monospace;`,
+      install: `npm i @fontsource/instrument-serif @fontsource-variable/newsreader`,
+      note: 'Serif all the way down. Newsreader has real optical sizes and is lovely for case-study prose. The risk: it reads as a writer’s site rather than an engineer’s. Worth seeing before you dismiss it.'
+    },
+    neutral: {
+      css: `--font-display: "Public Sans", system-ui, sans-serif;\n--font-sans:    "Public Sans", system-ui, sans-serif;\n--font-mono:    "Fragment Mono", ui-monospace, monospace;`,
+      install: `npm i @fontsource-variable/public-sans`,
+      note: 'Maximum neutrality — the type gets out of the way entirely. A legitimate choice, but it will not read as a decision.'
+    },
+    everyone: {
+      css: `--font-display: "Inter", system-ui, sans-serif;\n--font-sans:    "Inter", system-ui, sans-serif;`,
+      install: `npm i @fontsource-variable/inter`,
+      note: 'Included only as the control. This is what the comparison is against — flip back to it after looking at the others.'
+    },
+    current: {
+      css: `--font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;`,
+      install: `(nothing to install)`,
+      note: 'The current mockup: the system stack. Zero bytes, renders differently on every OS, and is why the site currently looks like macOS rather than like you.'
+    },
+  };
+
+  const recipeEl = document.getElementById('recipe');
+  const noteEl = document.getElementById('recipe-note');
+  const buttons = [...document.querySelectorAll('.picker button')];
+
+  const apply = (val) => {
+    root.dataset.type = val;
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.val === val)));
+    const r = recipes[val];
+    recipeEl.innerHTML = r.css.replace(/"([^"]+)"/g, '"<b>$1</b>"') + '\n\n' + r.install;
+    noteEl.innerHTML = r.note;
+  };
+
+  buttons.forEach((b) => b.addEventListener('click', () => apply(b.dataset.val)));
+  apply('editorial');
+</script>
+</body>
+</html>

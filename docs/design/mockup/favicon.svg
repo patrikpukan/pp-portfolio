@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- "PP" monogram, drawn as paths rather than <text>:
+       no font dependency, identical on every platform, and it
+       survives conversion to .ico / .png. Weight and counters are
+       tuned for 16px legibility, not for looking elegant at 64. -->
+  <style>
+    .tile { fill: #1c1917; }
+    .ink  { fill: #fafaf9; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #fafaf9; }
+      .ink  { fill: #1c1917; }
+    }
+  </style>
+  <rect class="tile" width="64" height="64" rx="14"/>
+  <g class="ink" fill-rule="evenodd">
+    <!-- left P -->
+    <path d="M7 15h12a10.5 10.5 0 0 1 0 21h-4v13H7V15Zm8 7.2v6.6h3.6a3.3 3.3 0 0 0 0-6.6H15Z"/>
+    <!-- right P -->
+    <path d="M34 15h12a10.5 10.5 0 0 1 0 21h-4v13h-8V15Zm8 7.2v6.6h3.6a3.3 3.3 0 0 0 0-6.6H42Z"/>
+  </g>
+</svg>
