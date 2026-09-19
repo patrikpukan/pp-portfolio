@@ -50,3 +50,21 @@ export type SiteContent = {
     hobbies: ReadonlyArray<RichText>
   }
 }
+
+export const projectTags = ["web", "mobile", "oss"] as const
+export type ProjectTag = (typeof projectTags)[number]
+
+/** Locale-invariant project facts; one entry per project in projects.ts. */
+export type ProjectData = {
+  slug: string
+  name: string
+  tags: ReadonlyArray<ProjectTag>
+  /** null for ongoing open-source work: the card shows its tag instead. */
+  period: Period | null
+  stack: ReadonlyArray<string>
+}
+
+/** Per-locale project prose, in content/<locale>/projects/<slug>.ts. */
+export type ProjectContent = {
+  blurb: string
+}

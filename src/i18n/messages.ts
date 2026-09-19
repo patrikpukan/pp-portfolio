@@ -1,4 +1,4 @@
-import type { Period } from "@/content/types"
+import type { Period, ProjectTag } from "@/content/types"
 
 export const locales = ["en"] as const
 export type Locale = (typeof locales)[number]
@@ -37,6 +37,13 @@ type Messages = {
     projects: string
     about: string
   }
+  projects: {
+    filterLabel: string
+    all: string
+    tags: Record<ProjectTag, string>
+    /** Announced to screen readers when the filter changes. */
+    resultCount: (count: number) => string
+  }
   about: {
     experience: string
     stack: string
@@ -48,6 +55,8 @@ type Messages = {
     body: string
   }
 }
+
+const enPlural = new Intl.PluralRules("en")
 
 export const messages = {
   en: {
@@ -84,6 +93,17 @@ export const messages = {
     sections: {
       projects: "Projects",
       about: "About",
+    },
+    projects: {
+      filterLabel: "Filter projects",
+      all: "All",
+      tags: {
+        web: "Web",
+        mobile: "Mobile",
+        oss: "Open source",
+      },
+      resultCount: (count) =>
+        `${count} ${enPlural.select(count) === "one" ? "project" : "projects"}`,
     },
     about: {
       experience: "Experience",
