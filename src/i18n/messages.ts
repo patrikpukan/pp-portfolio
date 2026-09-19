@@ -7,6 +7,7 @@ export const defaultLocale: Locale = "en"
 type Messages = {
   meta: {
     title: (name: string) => string
+    caseStudyTitle: (project: string, name: string) => string
   }
   skipToContent: string
   header: {
@@ -26,6 +27,8 @@ type Messages = {
     period: (period: Period) => string
     /** Joins short facts on one line, e.g. employer and place. */
     joinFacts: (parts: ReadonlyArray<string>) => string
+    /** Joins a list of equal items, e.g. platforms. */
+    joinList: (parts: ReadonlyArray<string>) => string
   }
   intro: {
     contact: string
@@ -50,6 +53,27 @@ type Messages = {
     education: string
     hobbies: string
   }
+  caseStudy: {
+    backToProjects: string
+    live: string
+    source: string
+    facts: {
+      role: string
+      timeline: string
+      platforms: string
+      stack: string
+    }
+    sections: {
+      problem: string
+      built: string
+      outcome: string
+      retrospective: string
+    }
+    decision: string
+    pagerLabel: string
+    previous: string
+    next: string
+  }
   notFound: {
     title: string
     body: string
@@ -62,6 +86,7 @@ export const messages = {
   en: {
     meta: {
       title: (name) => `${name} — Software Engineer`,
+      caseStudyTitle: (project, name) => `${project} — ${name}`,
     },
     skipToContent: "Skip to content",
     header: {
@@ -83,6 +108,7 @@ export const messages = {
           ? String(from)
           : `${from} — ${to === "present" ? "now" : to}`,
       joinFacts: (parts) => parts.join(" · "),
+      joinList: (parts) => parts.join(", "),
     },
     intro: {
       contact: "Get in touch",
@@ -110,6 +136,27 @@ export const messages = {
       stack: "Stack",
       education: "Education",
       hobbies: "Outside of work",
+    },
+    caseStudy: {
+      backToProjects: "All projects",
+      live: "Live app",
+      source: "Source",
+      facts: {
+        role: "Role",
+        timeline: "Timeline",
+        platforms: "Platforms",
+        stack: "Stack",
+      },
+      sections: {
+        problem: "The problem",
+        built: "What I built",
+        outcome: "Where it landed",
+        retrospective: "What I’d do differently",
+      },
+      decision: "The decision I’d defend",
+      pagerLabel: "More projects",
+      previous: "Previous",
+      next: "Next",
     },
     notFound: {
       title: "404",

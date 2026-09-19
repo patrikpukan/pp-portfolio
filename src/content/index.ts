@@ -7,7 +7,7 @@ import { site as enSite } from "./en/site"
 
 // One entry per locale; a missing locale is a type error.
 const sites = { en: enSite } as const satisfies Record<Locale, SiteContent>
-const projectProse = { en: enProjects } as const satisfies Record<
+export const projectProse = { en: enProjects } as const satisfies Record<
   Locale,
   Record<ProjectSlug, ProjectContent>
 >

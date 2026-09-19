@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button"
 import { useSiteContent } from "@/content"
 import { profile } from "@/content/profile"
 import { useMessages } from "@/i18n/use-messages"
-import { GitHubIcon, LinkedInIcon } from "./brand-icons"
-import { RichText } from "./rich-text"
+import { GitHubIcon, LinkedInIcon } from "@/components/brand-icons"
+import { RichText } from "@/components/rich-text"
 
 export function IntroSection() {
   const t = useMessages()

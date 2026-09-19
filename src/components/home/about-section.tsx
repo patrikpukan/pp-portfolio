@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge"
 import { useSiteContent } from "@/content"
 import type { TimelineEntry } from "@/content/types"
 import { useMessages } from "@/i18n/use-messages"
-import { RichText } from "./rich-text"
+import { RichText } from "@/components/rich-text"
 import { Block, Section } from "./section"
 
 const mono = "font-mono text-[0.75rem] tracking-[0.02em]"
