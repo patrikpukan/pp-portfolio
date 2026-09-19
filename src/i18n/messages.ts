@@ -1,3 +1,5 @@
+import type { Period } from "@/content/types"
+
 export const locales = ["en"] as const
 export type Locale = (typeof locales)[number]
 export const defaultLocale: Locale = "en"
@@ -19,6 +21,27 @@ type Messages = {
   }
   footer: {
     copyright: (year: number, name: string) => string
+  }
+  common: {
+    period: (period: Period) => string
+    /** Joins short facts on one line, e.g. employer and place. */
+    joinFacts: (parts: ReadonlyArray<string>) => string
+  }
+  intro: {
+    contact: string
+    github: string
+    linkedin: string
+    openToWork: string
+  }
+  sections: {
+    projects: string
+    about: string
+  }
+  about: {
+    experience: string
+    stack: string
+    education: string
+    hobbies: string
   }
   notFound: {
     title: string
@@ -44,6 +67,29 @@ export const messages = {
     },
     footer: {
       copyright: (year, name) => `© ${year} ${name}`,
+    },
+    common: {
+      period: ({ from, to }) =>
+        to === undefined
+          ? String(from)
+          : `${from} — ${to === "present" ? "now" : to}`,
+      joinFacts: (parts) => parts.join(" · "),
+    },
+    intro: {
+      contact: "Get in touch",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+      openToWork: "Open to work",
+    },
+    sections: {
+      projects: "Projects",
+      about: "About",
+    },
+    about: {
+      experience: "Experience",
+      stack: "Stack",
+      education: "Education",
+      hobbies: "Outside of work",
     },
     notFound: {
       title: "404",
