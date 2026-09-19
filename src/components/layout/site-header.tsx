@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useLocation } from "@tanstack/react-router"
 import type { ReactNode } from "react"
-import { site } from "@/content/site"
+import { profile } from "@/content/profile"
 import { useMessages } from "@/i18n/use-messages"
 import { ThemeToggle } from "./theme-toggle"
 
@@ -27,11 +27,11 @@ export function SiteHeader() {
     >
       <div className="shell flex h-14 items-center justify-between gap-4">
         <SectionLink
-          section="intro"
+          section={isHome ? "intro" : null}
           isHome={isHome}
           className="text-[0.9375rem] font-semibold tracking-[-0.01em] lowercase"
         >
-          {site.name}
+          {profile.name}
           <span className="font-normal text-muted-foreground max-[34rem]:hidden">
             {" "}
             {t.header.tagline}
@@ -58,7 +58,7 @@ export function SiteHeader() {
 }
 
 // Homepage sections are one page: plain fragment anchors there (brief §1),
-// a router link back to the homepage section from anywhere else.
+// a router link back to the homepage (section) from anywhere else.
 function SectionLink({
   section,
   isHome,
@@ -66,13 +66,13 @@ function SectionLink({
   children,
   "aria-current": ariaCurrent,
 }: {
-  section: Section
+  section: Section | null
   isHome: boolean
   className: string
   children: ReactNode
   "aria-current"?: "true"
 }) {
-  if (isHome) {
+  if (isHome && section) {
     return (
       <a href={`#${section}`} aria-current={ariaCurrent} className={className}>
         {children}
@@ -82,7 +82,7 @@ function SectionLink({
   return (
     <Link
       to="/"
-      hash={section}
+      hash={section ?? undefined}
       aria-current={ariaCurrent}
       className={className}
     >

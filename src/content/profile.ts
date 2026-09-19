@@ -1,5 +1,7 @@
+import type { Profile } from "./types"
+
 // Locale-invariant identity. Translatable prose lives in content/<locale>/.
-export const site = {
+export const profile = {
   name: "Patrik Pukan",
   email: "patrik.pukan@gmail.com",
-} as const
+} as const satisfies Profile

@@ -11,13 +11,14 @@ import schibstedLatin from "@fontsource-variable/schibsted-grotesk/files/schibst
 import appCss from "../styles.css?url"
 import { SiteFooter } from "@/components/layout/site-footer"
 import { SiteHeader } from "@/components/layout/site-header"
-import { defaultLocale } from "@/i18n/messages"
+import { profile } from "@/content/profile"
+import { defaultLocale, messages } from "@/i18n/messages"
 import { useLocale, useMessages } from "@/i18n/use-messages"
 import { themeScript } from "@/lib/theme"
 
 export const Route = createRootRoute({
   beforeLoad: () => ({ locale: defaultLocale }),
-  head: () => ({
+  head: ({ match }) => ({
     meta: [
       {
         charSet: "utf-8",
@@ -27,7 +28,7 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "TanStack Start Starter",
+        title: messages[match.context.locale].meta.title(profile.name),
       },
     ],
     links: [

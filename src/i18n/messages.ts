@@ -3,6 +3,9 @@ export type Locale = (typeof locales)[number]
 export const defaultLocale: Locale = "en"
 
 type Messages = {
+  meta: {
+    title: (name: string) => string
+  }
   skipToContent: string
   header: {
     tagline: string
@@ -25,6 +28,9 @@ type Messages = {
 
 export const messages = {
   en: {
+    meta: {
+      title: (name) => `${name} — Software Engineer`,
+    },
     skipToContent: "Skip to content",
     header: {
       tagline: "— software engineer",
