@@ -14,6 +14,9 @@ The HTML/CSS mockup in `docs/design/mockup/` is the visual reference. When the m
 and the brief disagree, the brief wins. The mockup contains deliberate shortcuts; §12 of
 the brief lists what must not be ported.
 
+**Where the build stands: [`docs/ROADMAP.md`](docs/ROADMAP.md).** Read it first in a new
+session. It has a checkbox per phase and the decisions already settled during the build.
+
 ## Commands
 
 Use **npm**, never pnpm or yarn. (`.cta.json` says pnpm; that's stale scaffold
@@ -82,9 +85,8 @@ and a 375px-wide viewport.
 
 - Work in small phases and commit after each one that passes the done checks. Use
   conventional commit prefixes (`feat:`, `fix:`, `refactor:`, `chore:`, `docs:`).
-- Build order: tokens, fonts and root layout (with a theme toggle that doesn't flash);
-  then the homepage sections; then the case-study route; then `/resume` and its print
-  stylesheet; then 404, favicon, and meta.
+- Build order and scope per phase: `docs/ROADMAP.md`. When a phase's commits land, tick
+  it there (with the commit hashes) in the same commit that completes the phase.
 - All copy in the mockup is placeholder, at roughly the right length. Patrik writes the
   real content. Keep the placeholders; don't invent new "real-sounding" content.
 - If a decision isn't covered by the brief, ask. Don't improvise a new design direction.
