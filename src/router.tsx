@@ -6,6 +6,9 @@ export function getRouter() {
     routeTree,
 
     scrollRestoration: true,
+    // A new page starts at the top at once; smooth scrolling (styles.css)
+    // is for in-page anchors only.
+    scrollRestorationBehavior: "instant",
     defaultPreload: "intent",
     defaultPreloadStaleTime: 0,
   })

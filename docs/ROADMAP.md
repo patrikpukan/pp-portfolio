@@ -28,15 +28,12 @@ commit hashes. The design and the reasons behind it are in
   placeholder text. Get the heading structure right here (brief §5). If the diff gets
   big, split it into 2a (intro and About) and 2b (projects and filter).
 
-- [ ] **Phase 3: the case-study route.**
+- [x] **Phase 3: the case-study route.**
+      Commits: `643593d`, and the commit that ticks this box
 
   `projects.$slug.tsx`, one content module per project, the fact list, "decision I'd
   defend" block, stats row and figures, the previous/next links, per-page metadata, and a
-  proper "not found" for unknown project names. Use plan mode for this one: agree the
-  component breakdown before any code.
-
-  Starting point: 2b left a stub `src/routes/projects.$slug.tsx`. It returns a real 404
-  for unknown slugs and shows only the project name for known ones. Phase 3 replaces it.
+  proper "not found" for unknown project names.
 
 - [ ] **Phase 4: `/resume`.**
 
@@ -67,3 +64,15 @@ reason.
   shadcn's stone default.
 - The theme toggle is labelled "Dark theme" and exposes its state with `aria-pressed`.
 - `docs/design/mockup/` is Prettier-ignored, so the reference file stays untouched.
+- Case-study sections are required by the type. Projects without real copy yet carry
+  short "Placeholder: …" paragraphs, never invented real-sounding text.
+- A figure without an image renders the mockup's dashed 16:10 frame, labelled with its
+  alt text. Adding a screenshot (imported from `src/assets/`, with width and height) is a
+  content-only change.
+- The case-study pager wraps around: the last project's Next is the first project.
+- The "decision I'd defend" label is muted, not brand: brief §4 names only the border,
+  and §2 keeps the accent off text.
+- Stack badges on a case study come from `projects.ts`, the same list as the card (the
+  mockup's extra "Postgres" badge isn't there).
+- Route changes reset scroll instantly (`scrollRestorationBehavior: "instant"`); smooth
+  scrolling is for in-page anchors only.
