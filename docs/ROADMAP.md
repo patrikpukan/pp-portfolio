@@ -62,7 +62,9 @@ reason.
   for About entries, which sit under an `<h3>` block.
 - Dark `--primary` is `oklch(0.985 0.001 106.423)`, matching the mockup rather than
   shadcn's stone default.
-- The theme toggle is labelled "Dark theme" and exposes its state with `aria-pressed`.
+- The theme toggle cycles System → Light → Dark, and System is the default. System is
+  stored as no `localStorage.theme` key. The icon shows the current mode, and the
+  accessible name states the current and next mode (no `aria-pressed`).
 - `docs/design/mockup/` is Prettier-ignored, so the reference file stays untouched.
 - Case-study sections are required by the type. Projects without real copy yet carry
   short "Placeholder: …" paragraphs, never invented real-sounding text.

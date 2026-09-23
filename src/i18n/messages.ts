@@ -1,4 +1,5 @@
 import type { Period, ProjectTag } from "@/content/types"
+import type { ThemePreference } from "@/lib/theme"
 
 export const locales = ["en"] as const
 export type Locale = (typeof locales)[number]
@@ -13,7 +14,13 @@ type Messages = {
   header: {
     tagline: string
     navLabel: string
-    themeToggle: string
+    theme: {
+      /** Accessible name before the current mode is known (server render). */
+      label: string
+      /** Accessible name once known: the current mode and what a click switches to. */
+      state: (current: string, next: string) => string
+      modes: Record<ThemePreference, string>
+    }
   }
   nav: {
     intro: string
@@ -92,7 +99,11 @@ export const messages = {
     header: {
       tagline: "— software engineer",
       navLabel: "Main",
-      themeToggle: "Dark theme",
+      theme: {
+        label: "Theme",
+        state: (current, next) => `Theme: ${current}, switch to ${next}`,
+        modes: { system: "system", light: "light", dark: "dark" },
+      },
     },
     nav: {
       intro: "Intro",
