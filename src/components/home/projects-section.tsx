@@ -14,7 +14,30 @@ import { useReveal } from "./use-reveal"
 
 type Filter = ProjectTag | "all"
 
+/**
+ * Temporary: while the projects are mock content, show a work-in-progress
+ * notice instead of the list. Set to `true` to bring the list back.
+ */
+// eslint-disable-next-line @typescript-eslint/no-inferrable-types -- keeps the branch below from being flagged as dead code
+const SHOW_PROJECTS: boolean = false
+
 export function ProjectsSection() {
+  const t = useMessages()
+
+  return (
+    <Section id="projects" label={t.sections.projects}>
+      {SHOW_PROJECTS ? (
+        <ProjectsList />
+      ) : (
+        <p className="rounded-lg border border-dashed px-5 py-8 text-center font-mono text-[0.75rem] tracking-[0.02em] text-muted-foreground">
+          {t.projects.wip}
+        </p>
+      )}
+    </Section>
+  )
+}
+
+function ProjectsList() {
   const t = useMessages()
   const [filter, setFilter] = useState<Filter>("all")
   const visible = projects.filter(
@@ -24,7 +47,7 @@ export function ProjectsSection() {
   )
 
   return (
-    <Section id="projects" label={t.sections.projects}>
+    <>
       <ToggleGroup
         aria-label={t.projects.filterLabel}
         className="mb-5"
@@ -53,7 +76,7 @@ export function ProjectsSection() {
           <ProjectCard key={project.slug} project={project} />
         ))}
       </div>
-    </Section>
+    </>
   )
 }
 

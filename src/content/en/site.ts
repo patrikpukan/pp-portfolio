@@ -21,7 +21,7 @@ export const site = {
         title: "Software Engineer",
         org: "Česká spořitelna",
         place: "Prague",
-        note: "Lead frontend for two client products; own the React Native release pipeline.",
+        note: "Started as frontend engineer, now fullstack; worked on delivering a financial scoring app.",
       },
       {
         period: { from: 2021, to: 2021 },

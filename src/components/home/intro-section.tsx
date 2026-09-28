@@ -19,9 +19,9 @@ export function IntroSection() {
         <img
           src={portrait}
           alt=""
-          width={80}
-          height={80}
-          className="mb-6 size-20 rounded-full border bg-muted object-cover"
+          width={104}
+          height={104}
+          className="mb-6 size-26 rounded-full border bg-muted object-cover"
         />
 
         <h1
