@@ -2,13 +2,12 @@ import type { Profile } from "./types"
 
 // Locale-invariant identity. Translatable prose lives in content/<locale>/.
 export const profile: Profile = {
-  name: "Patrik Pukan",
+  name: "Patrik Pukán",
   initials: "PP",
-  email: "patrik.pukan@gmail.com",
+  email: "pukanpatrik@gmail.com",
   openToWork: true,
-  // Placeholders, as in the mockup.
   links: {
-    github: "#",
-    linkedin: "#",
+    github: "https://github.com/patrikpukan",
+    linkedin: "https://www.linkedin.com/in/patrik-pukan/",
   },
 }

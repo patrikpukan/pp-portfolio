@@ -6,6 +6,7 @@ import { profile } from "@/content/profile"
 import { useMessages } from "@/i18n/use-messages"
 import { GitHubIcon, LinkedInIcon } from "@/components/brand-icons"
 import { RichText } from "@/components/rich-text"
+import portrait from "@/assets/portrait.webp"
 
 export function IntroSection() {
   const t = useMessages()
@@ -14,12 +15,14 @@ export function IntroSection() {
   return (
     <section id="intro" aria-labelledby="intro-heading" className="pt-22 pb-18">
       <div className="shell">
-        <div
-          aria-hidden="true"
-          className="mb-6 grid size-14 place-items-center rounded-full border bg-muted text-base font-semibold tracking-[-0.02em]"
-        >
-          {profile.initials}
-        </div>
+        {/* Decorative: the name is the h1 right below. */}
+        <img
+          src={portrait}
+          alt=""
+          width={80}
+          height={80}
+          className="mb-6 size-20 rounded-full border bg-muted object-cover"
+        />
 
         <h1
           id="intro-heading"
