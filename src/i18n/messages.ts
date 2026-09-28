@@ -53,6 +53,8 @@ type Messages = {
     tags: Record<ProjectTag, string>
     /** Announced to screen readers when the filter changes. */
     resultCount: (count: number) => string
+    /** Temporary notice shown instead of the list while it's a work in progress. */
+    wip: string
   }
   about: {
     experience: string
@@ -141,6 +143,7 @@ export const messages = {
       },
       resultCount: (count) =>
         `${count} ${enPlural.select(count) === "one" ? "project" : "projects"}`,
+      wip: "This section is a work in progress. My projects are coming soon.",
     },
     about: {
       experience: "Experience",
