@@ -3,13 +3,15 @@ import type { SiteContent } from "../types"
 // Placeholder copy from the mockup, at roughly the right length.
 export const site = {
   intro: {
-    role: "Fullstack & mobile engineer",
+    role: "Full-Stack & Mobile Engineer",
     bio: [
-      "I build products end to end — ",
+      "I build products end-to-end, using cutting edge of ",
+      { strong: "agentic AI tools" },
+      " — delivering ",
       { strong: "type-safe web apps" },
-      " with React and TypeScript, the APIs behind them, and the ",
+      " with React and TanStack, the APIs behind them, or the ",
       { strong: "native mobile clients" },
-      " that ship alongside. I care about small bundles, fast feedback loops, and interfaces that stay out of the way.",
+      " that ship alongside.",
     ],
     facts: ["Prague, CZ · CET", "EN · SK · CZ "],
   },
@@ -55,7 +57,7 @@ export const site = {
     ],
     education: [
       {
-        period: { from: 2024, to: 2027 },
+        period: { from: 2024, to: 2026 },
         title: "Ing, Software Development",
         org: "Prague University of Economics and Business",
         place: "Prague",
