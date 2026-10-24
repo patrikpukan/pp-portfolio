@@ -5,9 +5,9 @@ export const site = {
   intro: {
     role: "Full-Stack & Mobile Engineer",
     bio: [
-      "I build products end-to-end, using cutting edge of ",
+      "I build products using cutting edge ",
       { strong: "agentic AI tools" },
-      " — delivering ",
+      " - delivering ",
       { strong: "type-safe web apps" },
       " with React and TanStack, the APIs behind them, or the ",
       { strong: "native mobile clients" },
@@ -23,7 +23,7 @@ export const site = {
         title: "Software Engineer",
         org: "Česká spořitelna",
         place: "Prague",
-        note: "Started as frontend engineer, now fullstack; worked on delivering a financial scoring app.",
+        note: "Started as frontend engineer, now fullstack; worked on delivering financial rating & scoring apps.",
       },
       {
         period: { from: 2021, to: 2021 },
@@ -70,7 +70,7 @@ export const site = {
       },
       {
         period: { from: 2019, to: 2020 },
-        title: "Computer Science, dropped out during covid:(",
+        title: "Computer Science, dropped out",
         org: "Charles University",
         place: "Prague",
       },
