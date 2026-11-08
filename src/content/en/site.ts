@@ -76,10 +76,10 @@ export const site = {
       },
     ],
     hobbies: [
-      [{ strong: "Running & Gym" }, " — three evenings a week, sanity checks."],
+      [{ strong: "Running & Gym" }, " - three evenings a week, sanity checks."],
       [
         { strong: "PC Gaming" },
-        " — esports titles during the school years, now indie and story-driven games.",
+        " - esports titles during the school years, now indie and story-driven games.",
       ],
       [
         { strong: "Mountains" },
@@ -87,7 +87,7 @@ export const site = {
       ],
       [
         { strong: "Urbanism" },
-        " — city planning, architecture, transport, design.",
+        " - city planning, architecture, transport, design.",
       ],
     ],
   },
