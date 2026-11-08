@@ -94,12 +94,12 @@ const enPlural = new Intl.PluralRules("en")
 export const messages = {
   en: {
     meta: {
-      title: (name) => `${name} — Software Engineer`,
-      caseStudyTitle: (project, name) => `${project} — ${name}`,
+      title: (name) => `${name} - Software Engineer`,
+      caseStudyTitle: (project, name) => `${project} - ${name}`,
     },
     skipToContent: "Skip to content",
     header: {
-      tagline: "— software engineer",
+      tagline: "- software engineer",
       navLabel: "Main",
       theme: {
         label: "Theme",
@@ -119,7 +119,7 @@ export const messages = {
       period: ({ from, to }) =>
         to === undefined
           ? String(from)
-          : `${from} — ${to === "present" ? "now" : to}`,
+          : `${from} - ${to === "present" ? "now" : to}`,
       joinFacts: (parts) => parts.join(" · "),
       joinList: (parts) => parts.join(", "),
     },

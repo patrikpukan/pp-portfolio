@@ -5,11 +5,11 @@ export const site = {
   intro: {
     role: "Full-Stack & Mobile Engineer",
     bio: [
-      "I build products using cutting edge ",
-      { strong: "agentic AI tools" },
-      " - delivering ",
+      "I build products with ",
+      { strong: "AI agents" },
+      " - ",
       { strong: "type-safe web apps" },
-      " with React and TanStack, the APIs behind them, or the ",
+      " in React and TanStack, the APIs behind them, and the ",
       { strong: "native mobile clients" },
       " that ship alongside.",
     ],
@@ -76,10 +76,10 @@ export const site = {
       },
     ],
     hobbies: [
-      [{ strong: "Running & Gym" }, " — three evenings a week, sanity checks."],
+      [{ strong: "Running & Gym" }, " - three evenings a week, sanity checks."],
       [
         { strong: "PC Gaming" },
-        " — esports titles during the school years, now indie and story-driven games.",
+        " - esports titles during the school years, now indie and story-driven games.",
       ],
       [
         { strong: "Mountains" },
@@ -87,7 +87,7 @@ export const site = {
       ],
       [
         { strong: "Urbanism" },
-        " — city planning, architecture, transport, design.",
+        " - city planning, architecture, transport, design.",
       ],
     ],
   },
