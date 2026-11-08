@@ -7,7 +7,7 @@ export const site = {
     bio: [
       "I build products with ",
       { strong: "AI agents" },
-      " — ",
+      " - ",
       { strong: "type-safe web apps" },
       " in React and TanStack, the APIs behind them, and the ",
       { strong: "native mobile clients" },
