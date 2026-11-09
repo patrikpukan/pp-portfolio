@@ -1,7 +1,9 @@
 name: Build
 
 on:
+  # PR branches are covered by pull_request; push only builds main after merge.
   push:
+    branches: [main]
   pull_request:
 
 jobs:
